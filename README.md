@@ -6,9 +6,9 @@ This is the source code repository of my Spring 2015 ITEC 335 course work in Sof
 
 ## About the author
 
-I am David Ball, an IT Professional and Software Engineering student at [http://www.radford.edu/](Radford University).
+I am David Ball, an IT Professional and Software Engineering student at [Radford University](http://www.radford.edu/).
 
-You can learn more about me by visiting my web site at [http://www.daball.me/](www.daball.me).
+You can learn more about me by visiting my web site at [www.daball.me](http://www.daball.me/).
 
 ## License
 

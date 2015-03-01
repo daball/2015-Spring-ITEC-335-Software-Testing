@@ -1,0 +1,63 @@
+We wrestled several years ago with bugs in the coding and probable lack of testing for the DegreeWorks audits for minors, so I decided this might make some interesting homework to focus on black box testing, white box testing, stubs, and integration.
+
+For Homework 6 and Homework 7, imagine part of your job is to implement and test part of the DegreeWorks audit system for minors. I have implemented and tested the Math minor (see files in D2L). Your job is to extend both the implementation and tests to cover the Media Studies minor and the Stat minor in two phases. The specifications for the minors are from the 2010-2011 catalog (see README.TXT).
+
+For Homework 6, you will implement one additional method to handle another minor along with corresponding white box tests in an additional method in the testing class. You will also implement one additional method stub for the other minor and one additional method in the testing class with black box tests for the stub.
+
+In summary, everyone will have the following methods in AuditMinor.java:
+
+    public boolean mathMinor(int[] mathCourses, int[] statCourses)
+    public boolean statMinor(int[] mathCourses, int[] statCourses)
+    public boolean mediaStudiesMinor(int[] comsCourses)
+
+and everyone will have the following methods in AuditMinorTest.java
+
+    public void testMathMinor()
+    public void testStatMinor()
+    public void testMediaStudiesMinor()
+
+For Homework 7, you will replace your statMinor and mediaStudiesMinor with methods I choose and rerun (and adjust if necessary) your tests. You can assume that arrays that are passed to your methods have already been verified in two ways:
+
+    No duplicates
+    Each array entry is a valid RU course number for the indicated department
+
+Also, for simplicity for these homework problems, you may assume that each course is 3 credit hours.
+
+Homework 6 is in 2 parts all of which must be completed by Week 6 Sat 8pm:
+
+    Java testing work using JUnit
+    Homework 6 quiz submission
+
+Here is how I will assess Homework 6:
+
+    20 points: Homework 6 submitted on-time with correct two files pasted into question boxes
+    20 points: AuditMinor methods (3 total - 2 which you write as detailed below)
+    60 points: AuditMinorTest methods (3 total - 2 which you write as detailed below)
+
+Homework 7 is in 2 parts all of which must be completed by Week 7 Sat 8pm:
+
+    Java testing work using JUnit
+    Homework 7 quiz submission
+
+Here is how I will assess Homework 7:
+
+    20 points: Homework 7 submitted on-time with correct two files pasted into question boxes
+    20 points: AuditMinor methods (3 total - updated as detailed below)
+    60 points: AuditMinorTest methods (3 total - updated as detailed below)
+
+Homework 6:
+
+    Start with the files (AuditMinor.java, AuditMinorTest.java, README.TXT)
+    Implement statMinor, stub mediaStudiesMinor, white box testStatMinor, and black box testMediaStudiesMinor (students with last names beginning with A-M)
+    Implement mediaStudiesMinor, stub statMinor, white box testMediaStudiesMinor, and black box testStatMinor (students with last names beginning with N-Z)
+    Paste your updated AuditMinor.java and AuditMinorTest.java into Homework 4 and submit
+
+I am not asking you to work in teams for Homework 6. I just wanted to split the implementations so I could get several implementations of statMinor and several implementations of mediaStudiesMinor and the corresponding test systems (some written as black box tests and some written as white box tests).
+
+Homework 7:
+
+    Replace your statMinor and mediaStudiesMinor with the reference implementations of statMinor and mediaStudiesMinor (see content under Week 7)
+    Rework your tests as necessary and debug those reference implementations adding comments in both .java files to show which tests caught the two bugs and the changes you made to fix the bugs
+    Resubmit AuditMinor.java and AuditMinorTest.java in Homework 7
+
+For JUnit work, if you use BlueJ, create a new project Audit and start with the 3 files. One easy way to pull in the two Java files if you are using BlueJ is to use "Add Class from File" to get the two Java files into your project and then copy and paste the specification for the minors from README.TXT into your README.TXT. Also, I wrote the implementation of mathMinor and the corresponding white box tests, so additional black box tests or white box tests for mathMinor which identify possible bugs in my implementation of mathMinor are welcomed.

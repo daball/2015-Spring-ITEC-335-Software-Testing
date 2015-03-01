@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>RowTest.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">RowTest (Feb 14, 2015 7:32:11 PM)</a> &gt; <a href="../../index.html" class="el_group">Homework4</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">RowTest.java</span></div><h1>RowTest.java</h1><pre class="source lang-java linenums">import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+<span class="fc" id="L6">public class RowTest {</span>
+
+	@Test
+	public void testRow() {
+		//generate some cells and expectations
+<span class="fc" id="L11">		String[] cells = new String[256];</span>
+<span class="fc" id="L12">		StringBuilder expectedString = new StringBuilder();</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">		for (int c = 0; c &lt; 256; c++) {</span>
+<span class="fc" id="L14">			cells[c] = &quot;Cell&quot; + (c+1);</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">			if (c &gt; 0)</span>
+<span class="fc" id="L16">				expectedString.append(&quot;~&quot;);</span>
+<span class="fc" id="L17">			expectedString.append(cells[c]);</span>
+		}
+<span class="fc" id="L19">		assertFalse(expectedString.equals(&quot;&quot;));</span>
+		
+		//run tests
+<span class="fc" id="L22">		Row row = new Row(cells);</span>
+<span class="fc" id="L23">		assertEquals(cells.length, row.columnCount());</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">		for (int i = 0; i &lt; cells.length; i++) {</span>
+<span class="fc" id="L25">			assertEquals(row.get(i), cells[i]);</span>
+		}
+<span class="fc" id="L27">		assertEquals(expectedString.toString(), row.toString());</span>
+<span class="fc" id="L28">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.2.201409121644</span>RowTest (Feb 14, 2015 7:32:11 PM)</div></body></html>

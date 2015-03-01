@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>Row.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">RowTest (Feb 14, 2015 7:32:11 PM)</a> &gt; <a href="../../index.html" class="el_group">Homework4</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Row.java</span></div><h1>Row.java</h1><pre class="source lang-java linenums">/**
+ * Row is the part of Relation for each table row.
+ * 
+ * @author David Ball
+ */
+public class Row
+{
+    private String[] cells;
+
+    /**
+     * Constructor for objects of class Row
+     */
+<span class="fc" id="L13">    Row(String[] cells)</span>
+    {
+<span class="fc" id="L15">        this.cells = cells;</span>
+<span class="fc" id="L16">    }</span>
+
+    /**
+     * Returns the value of the cell at index or null if index is out of range.
+     * 
+     * @param  index   the cell index to retrieve data
+     * @return     the data is cell at index or null if index is out of range
+     */
+    public String get(int index)
+    {
+        // put your code here
+<span class="fc" id="L27">        return this.cells[index];</span>
+    }
+    
+    /**
+     * Returns the number of columns in the row.
+     */
+    public int columnCount()
+    {
+<span class="fc" id="L35">        return this.cells.length;</span>
+    }
+    
+    /**
+     * Returns a string with each cell seperated by tildes.
+     */
+    public String toString()
+    {
+<span class="fc" id="L43">        StringBuilder sb = new StringBuilder();</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        for (String cell: this.cells)</span>
+        {
+<span class="fc" id="L46">            sb.append(cell);</span>
+<span class="fc" id="L47">            sb.append(&quot;~&quot;);</span>
+        }   
+<span class="fc" id="L49">        sb.deleteCharAt(sb.length()-1);</span>
+<span class="fc" id="L50">        return sb.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.2.201409121644</span>RowTest (Feb 14, 2015 7:32:11 PM)</div></body></html>
